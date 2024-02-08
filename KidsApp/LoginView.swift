@@ -22,6 +22,19 @@ struct LoginView: View {
                 .padding()
                 .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
                 .font(.headline)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("login".uppercased())
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(loginButton() ? Color.gray.opacity(0.3) : Color.blue)
+                        .clipShape(.buttonBorder)
+                        .foregroundStyle(.white)
+                        .font(.headline)
+                })
+                .disabled(disableButton)
             }
             .padding()
             .navigationTitle("Login")
