@@ -8,7 +8,18 @@ struct LoginView: View {
 
     var body: some View {
 
-        NavigationView {}
+        NavigationView {
+
+            VStack {
+                TextField("username",
+                          text: $textFieldText)
+                    .padding()
+                    .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
+                    .font(.headline)
+            }
+            .padding()
+            .navigationTitle("Login")
+        }
     }
 
     // MARK: - Private Methods
