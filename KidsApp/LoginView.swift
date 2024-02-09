@@ -11,7 +11,7 @@ struct LoginView: View {
         NavigationView {
             
             VStack {
-                TextField("username",
+                TextField("Username",
                           text: $textFieldText)
                 .padding()
                 .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
@@ -29,7 +29,7 @@ struct LoginView: View {
                     Text("login".uppercased())
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(loginButton() ? Color.gray.opacity(0.3) : Color.blue)
+                        .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.blue)
                         .clipShape(.buttonBorder)
                         .foregroundStyle(.white)
                         .font(.headline)
@@ -43,8 +43,8 @@ struct LoginView: View {
     
     // MARK: - Private Methods
     
-    private func loginButton() -> Bool {
-        return textFieldText.isEmpty && passwordText.isEmpty
+    private func textFieldHasValue() -> Bool {
+        return textFieldText.isEmpty || passwordText.isEmpty
     }
 }
 
