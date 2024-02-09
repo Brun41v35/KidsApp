@@ -6,7 +6,6 @@ struct LoginView: View {
 
     @State private var textFieldText: String = ""
     @State private var passwordText: String = ""
-    @State private var disableButton: Bool = true
 
     // MARK: - Body
 
@@ -41,7 +40,7 @@ struct LoginView: View {
                 .disabled(textFieldHasValue())
             }
             .padding()
-            .navigationTitle("Login")
+            .navigationTitle("Login 🐣")
         }
     }
 
