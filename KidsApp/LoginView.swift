@@ -13,32 +13,37 @@ struct LoginView: View {
 
         NavigationView {
 
-            VStack {
-                TextField("Username",
-                          text: $textFieldText)
-                .padding()
-                .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
-                .font(.headline)
+            ZStack {
+                Color.yellow.opacity(0.2)
+                    .ignoresSafeArea()
 
-                SecureField("Password", text: $passwordText)
+                VStack {
+                    TextField("Username",
+                              text: $textFieldText)
                     .padding()
                     .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
                     .font(.headline)
-                    .textContentType(.password)
 
-                NavigationLink(destination: Text("ListView")) {
-                    Text("Login".uppercased())
+                    SecureField("Password", text: $passwordText)
                         .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.blue.opacity(0.3))
-                        .clipShape(.buttonBorder)
-                        .foregroundStyle(.white)
+                        .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
                         .font(.headline)
+                        .textContentType(.password)
+
+                    NavigationLink(destination: Text("ListView")) {
+                        Text("Login".uppercased())
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.yellow.opacity(0.3))
+                            .clipShape(.buttonBorder)
+                            .foregroundStyle(.white)
+                            .font(.headline)
+                    }
+                    .disabled(textFieldHasValue())
                 }
-                .disabled(textFieldHasValue())
+                .padding()
+                .navigationTitle("Login 🐣")
             }
-            .padding()
-            .navigationTitle("Login 🐣")
         }
     }
 
