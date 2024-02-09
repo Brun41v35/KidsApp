@@ -21,11 +21,11 @@ struct LoginView: View {
                 .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
                 .font(.headline)
 
-                TextField("Password",
-                          text: $passwordText)
-                .padding()
-                .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
-                .font(.headline)
+                SecureField("Password", text: $passwordText)
+                    .padding()
+                    .background(Color.gray.opacity(0.3).clipShape(.buttonBorder))
+                    .font(.headline)
+                    .textContentType(.password)
 
                 Button(action: {
                     login()
