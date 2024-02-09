@@ -30,7 +30,7 @@ struct LoginView: View {
                     Text("Login".uppercased())
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.blue)
+                        .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.blue.opacity(0.3))
                         .clipShape(.buttonBorder)
                         .foregroundStyle(.white)
                         .font(.headline)
