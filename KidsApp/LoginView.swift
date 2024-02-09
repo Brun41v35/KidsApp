@@ -26,17 +26,15 @@ struct LoginView: View {
                     .font(.headline)
                     .textContentType(.password)
 
-                Button(action: {
-                    login()
-                }, label: {
-                    Text("login".uppercased())
+                NavigationLink(destination: Text("ListView")) {
+                    Text("Login".uppercased())
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(textFieldHasValue() ? Color.gray.opacity(0.3) : Color.blue)
                         .clipShape(.buttonBorder)
                         .foregroundStyle(.white)
                         .font(.headline)
-                })
+                }
                 .disabled(textFieldHasValue())
             }
             .padding()
