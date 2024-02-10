@@ -6,6 +6,7 @@ struct LoginView: View {
 
     @State private var textFieldText: String = ""
     @State private var passwordText: String = ""
+    @State private var isAnimated: Bool = false
 
     // MARK: - Body
 
@@ -18,6 +19,12 @@ struct LoginView: View {
                     .ignoresSafeArea()
 
                 VStack {
+
+                    RoundedRectangle(cornerRadius: 50)
+                        .fill(Color.yellow.opacity(0.3))
+                        .frame(width: 150, height: 150)
+                        .padding()
+
                     TextField("Username",
                               text: $textFieldText)
                     .padding()
@@ -40,6 +47,8 @@ struct LoginView: View {
                             .font(.headline)
                     }
                     .disabled(textFieldHasValue())
+
+                    Spacer()
                 }
                 .padding()
                 .navigationTitle("Login")
