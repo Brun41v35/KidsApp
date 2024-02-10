@@ -42,7 +42,7 @@ struct LoginView: View {
                     .disabled(textFieldHasValue())
                 }
                 .padding()
-                .navigationTitle("Login 🐣")
+                .navigationTitle("Login")
             }
         }
     }
