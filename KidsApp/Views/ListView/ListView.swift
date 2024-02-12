@@ -1,10 +1,3 @@
-//
-//  ListView.swift
-//  KidsApp
-//
-//  Created by Bruno Silva on 11/02/24.
-//
-
 import SwiftUI
 
 struct ListView: View {
