@@ -2,17 +2,23 @@ import SwiftUI
 
 struct ListView: View {
 
+    // MARK: - Private Properties
+
+    private let products: [Product] = ProductList.values()
+
+    // MARK: - Body
+
     var body: some View {
 
-        List (0..<2) { item in
+        List (products, id: \.id) { product in
             HStack {
                 VStack(alignment: .leading, spacing: 5){
-                    Text("Baby Carriage")
+                    Text(product.name)
                         .fontWeight(.semibold)
                         .lineLimit(2)
                         .minimumScaleFactor(0.5)
                     
-                    Text("R$ 100,00")
+                    Text(product.value)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
