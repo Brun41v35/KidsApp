@@ -4,9 +4,9 @@ struct ListView: View {
 
     var body: some View {
 
-        List (0..<20) { item in
+        List (0..<2) { item in
             HStack {
-                VStack {
+                VStack(alignment: .leading, spacing: 5){
                     Text("Baby Carriage")
                         .fontWeight(.semibold)
                         .lineLimit(2)
