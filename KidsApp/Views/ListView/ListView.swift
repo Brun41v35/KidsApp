@@ -9,10 +9,9 @@ struct ListView: View {
     // MARK: - Body
 
     var body: some View {
-
         List (products, id: \.id) { product in
             HStack {
-                VStack(alignment: .leading, spacing: 5){
+                VStack(alignment: .leading, spacing: 5) {
                     Text(product.name)
                         .fontWeight(.semibold)
                         .lineLimit(2)
