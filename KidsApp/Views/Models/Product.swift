@@ -11,7 +11,7 @@ struct ProductList {
     static func values() -> [Product] {
 
         return [
-            Product(name: "Baby",
+            Product(name: "Baby Carriage",
                     value: "R$ 100,00"),
             Product(name: "Baby Carriage",
                     value: "R$ 100,00"),
