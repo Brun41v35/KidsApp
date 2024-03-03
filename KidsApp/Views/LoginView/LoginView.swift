@@ -37,7 +37,7 @@ struct LoginView: View {
                         .font(.headline)
                         .textContentType(.password)
 
-                    NavigationLink(destination: Text("ListView")) {
+                    NavigationLink(destination: ListView()) {
                         Text("Login".uppercased())
                             .padding()
                             .frame(maxWidth: .infinity)
