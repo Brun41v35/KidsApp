@@ -26,12 +26,6 @@ struct ListView: View {
             }
             .scrollContentBackground(.hidden)
             .background(Color.yellow.opacity(0.3))
-    
-            Button(action: {
-                
-            }, label: {
-                Text("Pressione")
-            })
         }
     }
 }
